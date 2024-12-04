@@ -27,13 +27,13 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/galaxy-strike.git
+   git clone https://github.com/chiraaax/Galaxy_Strike-MiniGame.git
    ```
 2. Navigate to the project folder:
    ```bash
-   cd galaxy-strike
+   cd Galaxy_Strike-MiniGame
    ```
-3. Open `index.html` in your preferred browser to play the game!
+3. Open `GalaxyStrike.html` in your preferred browser to play the game!
 
 
 ## 🌟 How to Play
