@@ -308,6 +308,13 @@ function renderPauseMessage() {
     ctx.fillText('Press "P" to Resume', canvas.width / 2, canvas.height / 2 + 60);
 }
 
+function restartGame() {
+    score = 0; health = 5; gameOver = false; isPaused = false;
+    enemies.length = 0; bullets.length = 0; powerUps.length = 0;
+    spawnEnemies(); gameLoop();
+}
+
+
 
 
 
