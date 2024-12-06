@@ -15,3 +15,16 @@ canvas.addEventListener('touchstart', (e) => {
 canvas.addEventListener('touchend', () => {
     player.dx = 0;
 });
+
+// Player properties
+const player = {
+    x: canvas.width / 2 - 25,
+    y: canvas.height - 70,
+    width: 50,
+    height: 50,
+    color: 'blue',
+    speed: 10,
+    dx: 0,
+    isHit: false,
+    hitFlashDuration: 300
+};
