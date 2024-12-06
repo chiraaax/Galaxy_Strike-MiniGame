@@ -92,3 +92,53 @@ function shootBullet() {
     }
 }
 
+// Function to draw the player with gradient color
+function drawPlayer() {
+    if (player.isHit) ctx.fillStyle = 'red'; 
+    else {
+        const gradient = ctx.createLinearGradient(player.x, player.y, player.x, player.y + player.height);
+        gradient.addColorStop(0, 'blue'); gradient.addColorStop(1, 'cyan');
+        ctx.fillStyle = gradient;
+    }
+    ctx.beginPath();
+    ctx.moveTo(player.x + player.width / 2, player.y);
+    ctx.lineTo(player.x, player.y + player.height);
+    ctx.lineTo(player.x + player.width, player.y + player.height);
+    ctx.closePath();
+    ctx.fill();
+    ctx.strokeStyle = 'white';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+}
+
+// Function to draw bullets
+function drawBullets() {
+    bullets.forEach((bullet, index) => {
+        bullet.y -= bulletSpeed;
+        ctx.fillStyle = 'yellow';
+        ctx.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
+
+        if (bullet.y + bullet.height < 0) {
+            bullets.splice(index, 1);
+        }
+    });
+}
+
+// Function to draw enemies
+function drawEnemies() {
+    enemies.forEach((enemy, index) => {
+        enemy.y += enemySpeed;
+        ctx.fillStyle = 'red';
+        ctx.fillRect(enemy.x, enemy.y, enemy.width, enemy.height);
+
+        if (enemy.y > canvas.height) {
+            enemies.splice(index, 1);
+            health -= 1;
+            if (health <= 0) {
+                gameOver = true;
+                saveHighScore();
+            }
+        }
+
+
+
