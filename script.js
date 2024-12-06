@@ -367,6 +367,20 @@ function gameLoop() {
     requestAnimationFrame(gameLoop);
 }
 
+// Spawn enemies at dynamic intervals
+function spawnEnemies() {
+    if (gameOver || isPaused || spawningEnemies) return;
+
+    spawningEnemies = true; // Set the flag to true when spawning starts
+    spawnEnemy();
+
+    setTimeout(() => {
+        spawningEnemies = false; // Reset the flag after the timeout
+        spawnEnemies(); // Continue the spawn cycle
+    }, spawnInterval);
+}
+
+
 
 
 
