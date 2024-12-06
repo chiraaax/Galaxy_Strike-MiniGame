@@ -314,6 +314,28 @@ function restartGame() {
     spawnEnemies(); gameLoop();
 }
 
+// Function to update player position
+function updatePlayer() {
+    player.x += player.dx;
+    if (player.x < 0) player.x = 0;
+    if (player.x + player.width > canvas.width) player.x = canvas.width - player.width;
+}
+
+// Keyboard input handlers
+function handleKeyDown(e) {
+    if (e.key === 'ArrowRight' || e.key === 'd') player.dx = player.speed;
+    else if (e.key === 'ArrowLeft' || e.key === 'a') player.dx = -player.speed;
+    else if (e.key === ' ') shootBullet();
+    else if (e.key === 'p') togglePause();
+    else if (e.key === 'r') if (isPaused || gameOver) restartGame();
+}          
+  
+function handleKeyUp(e) {
+    if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'ArrowLeft' || e.key === 'a') {
+        player.dx = 0;
+    }
+}
+
 
 
 
