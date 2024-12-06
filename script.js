@@ -246,6 +246,29 @@ powerUps.forEach((powerUp, powerUpIndex) => {
 
 }
 
+// Function to draw HUD
+function drawHUD() {
+    ctx.fillStyle = 'white';
+    ctx.font = '20px Arial';
+    ctx.textAlign = 'left';
+    ctx.fillText(`Score: ${score}`, 10, 30);
+    ctx.textAlign = 'right';
+    ctx.fillText(`High Score: ${highScore}`, canvas.width - 10, 30);
+
+    const barWidth = 150;
+    const barHeight = 15;
+    const healthRatio = health / 5;
+    const barX = canvas.width - barWidth - 20;
+
+    ctx.fillStyle = 'red';
+    ctx.fillRect(barX, 40, barWidth, barHeight);
+    ctx.fillStyle = 'lime';
+    ctx.fillRect(barX, 40, barWidth * healthRatio, barHeight);
+    ctx.strokeStyle = 'white';
+    ctx.strokeRect(barX, 40, barWidth, barHeight);
+}
+
+
 
 
 
