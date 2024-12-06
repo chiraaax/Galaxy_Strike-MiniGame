@@ -153,6 +153,21 @@ function drawEnemies() {
     });
 }
 
+// Function to draw power-ups
+function drawPowerUps() {
+    powerUps.forEach((powerUp, index) => {
+        powerUp.y += powerUp.speed;
+        ctx.fillStyle = 'lime';
+        ctx.beginPath();
+        ctx.arc(powerUp.x, powerUp.y, powerUp.size, 0, Math.PI * 2);
+        ctx.fill();
+
+        if (powerUp.y > canvas.height) {
+            powerUps.splice(index, 1);
+        }
+    });
+}
+
 
 
 
