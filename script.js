@@ -206,6 +206,14 @@ function activatePowerUp() {
     }, powerUpDuration);
 }
 
+// Function to save high score
+function saveHighScore() {
+    if (score > highScore) {
+        highScore = score;
+        localStorage.setItem('highScore', highScore);
+    }
+}
+
 
 
 
