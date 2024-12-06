@@ -140,5 +140,19 @@ function drawEnemies() {
             }
         }
 
+        // Collision with player
+        if (enemy.x < player.x + player.width &&
+            enemy.x + enemy.width > player.x &&
+            enemy.y < player.y + player.height &&
+            enemy.y + enemy.height > player.y) {
+            enemies.splice(index, 1);
+            player.isHit = true;
+            setTimeout(() => { player.isHit = false; }, player.hitFlashDuration);
+            health -= 1;
+        }
+    });
+}
+
+
 
 
