@@ -268,6 +268,47 @@ function drawHUD() {
     ctx.strokeRect(barX, 40, barWidth, barHeight);
 }
 
+// Function to show game-over screen
+function showGameOver() {
+    ctx.fillStyle = 'red';
+    ctx.font = '50px Arial';
+    ctx.textAlign = 'center';
+    ctx.fillText('GAME OVER', canvas.width / 2, canvas.height / 2);
+    ctx.font = '30px Arial';
+    ctx.fillText(`Final Score: ${score}`, canvas.width / 2, canvas.height / 2 + 50);
+}
+
+// Function to toggle pause state
+function togglePause() {
+    isPaused = !isPaused;
+
+    if (isPaused) {
+        renderPauseMessage();
+    } else {
+        if (!spawningEnemies) {
+            spawnEnemies(); // Resume spawning if it hasn't already resumed
+        }
+        requestAnimationFrame(gameLoop);
+    }
+}
+
+
+function renderPauseMessage() {
+    // Dim the background
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Display pause text
+    ctx.fillStyle = 'white';
+    ctx.font = '40px Arial';
+    ctx.textAlign = 'center';
+    ctx.fillText('PAUSED', canvas.width / 2, canvas.height / 2 - 50);
+    ctx.font = '20px Arial';
+    ctx.fillText('Press "R" to Restart', canvas.width / 2, canvas.height / 2 + 20);
+    ctx.fillText('Press "P" to Resume', canvas.width / 2, canvas.height / 2 + 60);
+}
+
+
 
 
 
