@@ -214,6 +214,38 @@ function saveHighScore() {
     }
 }
 
+// Function to detect collisions
+function detectCollisions() {
+    bullets.forEach((bullet, bulletIndex) => {
+        enemies.forEach((enemy, enemyIndex) => {
+            if (
+                bullet.x < enemy.x + enemy.width &&
+                bullet.x + bullet.width > enemy.x &&
+                bullet.y < enemy.y + enemy.height &&
+                bullet.y + bullet.height > enemy.y
+            ) {
+                bullets.splice(bulletIndex, 1);
+                enemies.splice(enemyIndex, 1);
+                score += 10;
+            }
+        });
+    });
+
+// Player-powerUp collisions
+powerUps.forEach((powerUp, powerUpIndex) => {
+    if (
+        player.x < powerUp.x + powerUp.size &&
+        player.x + player.width > powerUp.x - powerUp.size &&
+        player.y < powerUp.y + powerUp.size &&
+        player.y + player.height > powerUp.y - powerUp.size
+    ) {
+        powerUps.splice(powerUpIndex, 1);
+        activatePowerUp();
+    }
+});
+
+}
+
 
 
 
