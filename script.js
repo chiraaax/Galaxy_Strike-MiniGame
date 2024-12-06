@@ -380,6 +380,21 @@ function spawnEnemies() {
     }, spawnInterval);
 }
 
+// Event listeners
+window.addEventListener('keydown', handleKeyDown);
+window.addEventListener('keyup', handleKeyUp);
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth * 0.8;
+    canvas.height = window.innerHeight * 0.8;
+});
+
+// Start game
+spawnEnemies();
+gameLoop();
+
+
+
+
 
 
 
