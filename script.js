@@ -336,6 +336,38 @@ function handleKeyUp(e) {
     }
 }
 
+// Game loop
+function gameLoop() {
+    if (gameOver) {
+        showGameOver();
+        return;
+    }
+
+    if (isPaused) {
+        return; // Skip the loop if paused
+    }
+
+    // Clear the canvas and draw game elements
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawStars();
+    drawPlayer();
+    drawBullets();
+    drawEnemies();
+    drawPowerUps();
+    detectCollisions();
+    updatePlayer();
+    drawHUD();
+
+    // Visual effect for power-up activation
+    if (isPoweredUp) {
+        ctx.fillStyle = 'rgba(0, 255, 0, 0.2)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+
+    requestAnimationFrame(gameLoop);
+}
+
+
 
 
 
