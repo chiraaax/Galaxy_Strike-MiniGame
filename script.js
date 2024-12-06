@@ -28,3 +28,27 @@ const player = {
     isHit: false,
     hitFlashDuration: 300
 };
+
+// Bullet properties
+const bullets = [];
+const bulletSpeed = 15;
+let canShoot = true;
+const fireRate = 100;
+
+// Power-up properties
+const powerUps = [];
+const powerUpDuration = 5000;
+let isPoweredUp = false;
+let powerUpEndTime = 0;
+
+// Enemy properties
+const enemies = [];
+let enemySpeed = 2;
+let spawnInterval = 1000;
+
+// Game properties
+let score = 0;
+let health = 5;
+let gameOver = false;
+let isPaused = false;
+let highScore = localStorage.getItem('highScore') || 0;
