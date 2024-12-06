@@ -60,3 +60,20 @@ const stars = Array.from({ length: 100 }, () => ({
     size: Math.random() * 2 + 1,
     speed: Math.random() * 1 + 0.5
 }));
+
+// Function to draw stars
+function drawStars() {
+    ctx.fillStyle = 'white';
+    stars.forEach((star) => {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Move stars
+        star.y += star.speed;
+        if (star.y > canvas.height) {
+            star.y = 0;
+            star.x = Math.random() * canvas.width;
+        }
+    });
+}
