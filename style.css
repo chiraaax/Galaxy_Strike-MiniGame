@@ -1,1 +1,29 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* General Body Styling */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: radial-gradient(circle, #0f2027, #203a43, #2c5364);
+    color: white;
+    font-family: 'Press Start 2P', monospace;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
