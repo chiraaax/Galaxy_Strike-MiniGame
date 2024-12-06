@@ -77,3 +77,18 @@ function drawStars() {
         }
     });
 }
+
+// Function to shoot bullets (with cooldown)
+function shootBullet() {
+    if (canShoot) {
+        if (isPoweredUp) {
+            bullets.push({ x: player.x + 5, y: player.y, width: 10, height: 30 });
+            bullets.push({ x: player.x + player.width - 15, y: player.y, width: 10, height: 30 });
+        } else {
+            bullets.push({ x: player.x + player.width / 2 - 5, y: player.y, width: 10, height: 30 });
+        }
+        canShoot = false;
+        setTimeout(() => { canShoot = true; }, fireRate);
+    }
+}
+
