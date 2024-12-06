@@ -168,6 +168,45 @@ function drawPowerUps() {
     });
 }
 
+// Function to spawn an enemy
+function spawnEnemy() {
+    enemies.push({
+        x: Math.random() * (canvas.width - 50),
+        y: -50,
+        width: 50,
+        height: 50
+    });
+}
+
+// Function to spawn a power-up
+function spawnPowerUp() {
+    if (!gameOver && !isPaused) {
+        powerUps.push({
+            x: Math.random() * canvas.width,
+            y: -20,
+            size: 15,
+            speed: 2
+        });
+    }
+}
+
+setInterval(() => {
+    if (!isPaused && !gameOver) {
+        spawnPowerUp();
+    }
+}, 8000);  // Adjust spawn interval if needed
+
+
+// Function to activate power-up
+function activatePowerUp() {
+    isPoweredUp = true;
+    powerUpEndTime = Date.now() + powerUpDuration;
+    setTimeout(() => {
+        isPoweredUp = false;
+    }, powerUpDuration);
+}
+
+
 
 
 
