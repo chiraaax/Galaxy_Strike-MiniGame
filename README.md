@@ -23,7 +23,7 @@
 
 ### Gameplay
 
-![Galaxy Strike Gameplay](https://via.placeholder.com/800x400.png?text=Gameplay+Screenshot)
+![Galaxy Strike Gameplay](https://github.com/chiraaax/Galaxy_Strike-MiniGame/blob/main/Screenshots/Galaxy%20Strike.gif?raw=true)
 
 ### Game Paused
 
@@ -31,7 +31,7 @@
 
 ### Game Over
 
-![Galaxy Strike Pause](https://via.placeholder.com/800x400.png?text=Gameplay+Screenshot)
+![Galaxy Strike Game Over](https://via.placeholder.com/800x400.png?text=Gameplay+Screenshot)
 
 
 ## 🛠️ Installation
