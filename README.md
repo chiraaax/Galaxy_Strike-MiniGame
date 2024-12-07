@@ -6,10 +6,19 @@
 ## 🚀 Features
 
 - **Dynamic Gameplay:** Control your ship using arrow keys and blast enemies with your space bar.
+- **Rapid Fire Mode:** Take down enemies with rapid-fire bullets.
 - **Power-Ups:** Collect power-ups to enhance your firepower and gain temporary advantages.
+- **Dynamic Enemy Waves:** Enemies spawn at random intervals and positions, increasing the challenge.
+- **Collision Detection:** Bullets collide with enemies, updating your score.
+- **Health Bar and Score HUD:** Visualize your health and keep track of your high score.
 - **Level Progression:** Advance through increasingly difficult levels as you score more points.
 - **Responsive Design:** Works seamlessly on desktop and mobile devices.
 - **Customizable Experience:** Easily modify the game's appearance with simple CSS changes.
+
+## ⚙️ Technologies Used
+- HTML5 Canvas for rendering the game.
+- CSS3 for styling and layout.
+- Vanilla JavaScript for game logic and animations.
 
 ## 🎮 Controls
 
@@ -21,15 +30,15 @@
 
 ## 📸 Screenshots
 
-### Gameplay
+### Gameplay 🎮
 
 ![Galaxy Strike Gameplay](https://github.com/chiraaax/Galaxy_Strike-MiniGame/blob/main/Screenshots/Galaxy%20Strike.gif?raw=true)
 
-### Game Paused
+### Game Paused ⏸️
 
 ![Galaxy Strike Pause](https://github.com/chiraaax/Galaxy_Strike-MiniGame/blob/main/Screenshots/Screenshot-Game%20Paused.png?raw=true)
 
-### Game Over
+### Game Over 💥
 
 ![Galaxy Strike Game Over](https://github.com/chiraaax/Galaxy_Strike-MiniGame/blob/main/Screenshots/Screenshot-%20Game%20Over.png?raw=true)
 
