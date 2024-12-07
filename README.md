@@ -21,7 +21,18 @@
 
 ## 📸 Screenshots
 
+### Gameplay
+
 ![Galaxy Strike Gameplay](https://via.placeholder.com/800x400.png?text=Gameplay+Screenshot)
+
+### Game Paused
+
+![Galaxy Strike Pause](https://via.placeholder.com/800x400.png?text=Gameplay+Screenshot)
+
+### Game Over
+
+![Galaxy Strike Pause](https://via.placeholder.com/800x400.png?text=Gameplay+Screenshot)
+
 
 ## 🛠️ Installation
 
@@ -68,5 +79,4 @@ This project is licensed under the MIT License. See `LICENSE` for more informati
 ---
 
 Made with ❤️ by [Chiranjeewa Peellawatta](https://github.com/chiraaax)
-```
 
